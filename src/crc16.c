@@ -45,6 +45,8 @@ short CRC16(short crc, char data)
 }
 
 short calcula_CRC(unsigned char *commands, int size) {
+    //calculating crc for a given message
+    
 	int i;
 	short crc = 0;
 	for(i=0;i<size;i++) {
@@ -53,6 +55,8 @@ short calcula_CRC(unsigned char *commands, int size) {
 	return crc;
 }
 int verifica_crc(unsigned char *mensagem, int size, short crc_recebido){
+    //checking to see if a given crc is valid for a message
+
     short crc_calculado = calcula_CRC(mensagem, size);
     if (crc_calculado == crc_recebido){
         return 1;

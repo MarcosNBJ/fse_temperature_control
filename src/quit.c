@@ -1,6 +1,10 @@
 #include "quit.h"
 
 void quit() {
+  /*
+    Resets ncurses display
+    setts LCD, fan and resistor OFF
+  */
   refresh();
   endwin();
   initLCD();

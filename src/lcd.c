@@ -126,6 +126,8 @@ void selectSecondLine() {
 }
 
 void writeTemperaturesLCD(TempInfo temp){
+  //Receives the struct containing all temperatures and displays them to the LCD
+
   selectFirstLine();
   typeLn("TI:");
   typeFloat(temp.intTemperature);

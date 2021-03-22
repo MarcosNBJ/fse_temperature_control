@@ -89,6 +89,10 @@ float readFromUART(int uart0_filestream, unsigned char subcode){
 }
 
 float getInternalTemp() {
+    /*
+       Using UART to get internal temp
+       If a communication error is identified, the request is repeated
+    */
 
     float result = readFromUART(openUART(), INTERNAL_TEMP_CODE);
     while(result==-1){
@@ -97,6 +101,11 @@ float getInternalTemp() {
     return result;
 }
 float getPotentiometerTemp(){
+    /*
+       Using UART to get potentiometer value
+       If a communication error is identified, the request is repeated
+    */
+
     float result = readFromUART(openUART(), POTENT_TEMP_CODE);
     while(result==-1){
         result = readFromUART(openUART(), POTENT_TEMP_CODE);

@@ -2,8 +2,8 @@
 #define TEMPERATURES_H_
 
 typedef struct temps{
-    float intTemperature;
-    float refTemperature; 
-    float extTemperature; 
+    float intTemperature; //internal temperature
+    float refTemperature; //reference temperature
+    float extTemperature;  //external temperature
 }TempInfo;
 #endif
