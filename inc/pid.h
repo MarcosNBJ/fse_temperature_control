@@ -4,6 +4,5 @@
 void pid_configura_constantes(double Kp_, double Ki_, double Kd_);
 void pid_atualiza_referencia(float referencia_);
 double pid_controle(double saida_medida);
-double pid_get_referencia();
 
 #endif /* PID_H_ */

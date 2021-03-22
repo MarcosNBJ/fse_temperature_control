@@ -14,8 +14,6 @@ void control_loop(){
 		saidaControle = pid_controle(temperatures.intTemperature);
 		adjustTemperature(saidaControle);
 
-		temperatures.refTemperature = pid_get_referencia();
-
         printToTerminal(temperatures, (int)saidaControle);
 
         writeTemperaturesLCD(temperatures);

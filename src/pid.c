@@ -22,10 +22,6 @@ void pid_atualiza_referencia(float referencia_){
     referencia = (double) referencia_;
 }
 
-double pid_get_referencia(){
-    return referencia;
-}
-
 double pid_controle(double saida_medida){
 
     double erro = referencia - saida_medida;

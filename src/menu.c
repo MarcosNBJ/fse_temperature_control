@@ -80,8 +80,8 @@ void printToTerminal(TempInfo temp, int controle) {
   }
 
 
-  mvwprintw(window, 6, 1, "\tTI: %.2f TE: %.2f", temp.intTemperature, temp.extTemperature);
-  mvwprintw(window, 7, 1, "\tTR: %.2f CONTROLE: %.2f", temp.refTemperature, controle);
+  mvwprintw(window, 6, 1, "\tTEMP INTERNA: %.2f TEMP EXTERNA: %.2f", temp.intTemperature, temp.extTemperature);
+  mvwprintw(window, 7, 1, "\tTEMP REFERENCIA: %.2f SINAL DE CONTROLE: %d", temp.refTemperature, controle);
   if(controle > 0){
       mvwprintw(window, 9, 1, "\tRESISTOR: %s","LIGADO");
       mvwprintw(window, 10, 1, "\tFAN: %s", "DESLIGADO");
