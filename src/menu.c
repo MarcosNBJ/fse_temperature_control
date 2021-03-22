@@ -140,9 +140,6 @@ void menu() {
 					refresh();
 				}
 
-				if (option == 2) {
-					clear_reference();
-				}
 
 				if (option == 3) {
 					quit();

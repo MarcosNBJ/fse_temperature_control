@@ -11,6 +11,9 @@
 #include <stdlib.h>
 #include "temperatures.h"
 #include "quit.h"
+#include "control_loop.h"
+#include "menu.h"
+#include <pthread.h>
 
 int main(){
     signal(SIGINT,quit);
