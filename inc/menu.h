@@ -12,6 +12,6 @@
 
 void menu();
 void printToTerminal(TempInfo temp, int controle);
-void clear_menu(WINDOW *window);
+void clearWindow(WINDOW *window);
 
 #endif
