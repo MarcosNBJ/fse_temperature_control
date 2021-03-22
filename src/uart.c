@@ -53,10 +53,6 @@ float readFromUART(int uart0_filestream, unsigned char subcode){
         {
             printf("UART TX error\n");
         }
-        else
-        {
-            printf("escrito.\n");
-        }
     }
 
     usleep(100000);
