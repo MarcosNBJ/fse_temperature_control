@@ -9,5 +9,6 @@
 #define READ_DATA_H_
 
 void readTemperatures(TempInfo* temp);
+void setUserDefined(float temperature);
 
 #endif

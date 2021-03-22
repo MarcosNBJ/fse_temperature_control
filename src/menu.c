@@ -42,9 +42,8 @@ void set_reference() {
   echo();
   wmove(reference_window, _starty + 1, _startx + 13);
   wscanw(reference_window, "%f", &reference);
-
-  isUserDefined=1;
-  userDefinedTemperature=reference;
+  
+  setUserDefined(reference);
 
   ask_reference = 0;
 
@@ -143,7 +142,7 @@ void menu() {
 					refresh();
 				}
 				if (option ==2){
-					isUserDefined=0;
+					setUserDefined(-1);
 				}
 
 				if (option == 3) {
