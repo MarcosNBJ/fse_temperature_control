@@ -18,7 +18,6 @@ int openUART() {
     uart0_filestream = open("/dev/serial0", O_RDWR | O_NOCTTY | O_NDELAY);      //Open in non blocking read/write mode
     if (uart0_filestream == -1)
     {
-        printf("Erro - Não foi possível iniciar a UART.\n");
         return -1;
     }  
     struct termios options;
@@ -51,7 +50,7 @@ float readFromUART(int uart0_filestream, unsigned char subcode){
         int count = write(uart0_filestream, modbus_package, 9);
         if (count < 0)
         {
-            printf("UART TX error\n");
+            return -1;
         }
     }
 
@@ -63,13 +62,9 @@ float readFromUART(int uart0_filestream, unsigned char subcode){
         // Read up to 255 characters from the port if they are there
         unsigned char rx_buffer[256];
         int rx_length = read(uart0_filestream, (void*)rx_buffer, 255);      //Filestream, buffer to store in, number of bytes to read (max)
-        if (rx_length < 0)
+        if (rx_length <= 0 )
         {
-            printf("Erro na leitura.\n"); //An error occured (will occur if there are no bytes)
-        }
-        else if (rx_length == 0)
-        {
-            printf("Nenhum dado disponível.\n"); //No data waiting
+           return -1;
         }
         else
         {
