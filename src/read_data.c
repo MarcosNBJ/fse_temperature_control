@@ -18,9 +18,13 @@ void readTemperatures(TempInfo* temp){
     temp->intTemperature = getInternalTemp();
 
     if(isUserDefined){
-        temp->refTemperature=userDefinedTemperature;
+        temp->refTemperature = userDefinedTemperature;
     }else{
         temp->refTemperature = getPotentiometerTemp();
+    }
+
+    if(temp->refTemperature < temp->extTemperature){
+          temp->refTemperature = temp->extTemperature;
     }
 
 }
