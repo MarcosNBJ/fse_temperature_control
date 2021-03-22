@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <ncurses.h>
-#include "control_loop.h"
+#include "read_data.h"
 #include "temperatures.h"
 #include "quit.h"
 
