@@ -1,7 +1,7 @@
 #include "quit.h"
 
 void quit() {
-  lcd_init();
+  initLCD();
   setAllOff();
   exit(0);
 }
