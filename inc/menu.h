@@ -1,17 +1,10 @@
 #include<stdio.h>
-#include<uart.h>
-#include "lcd.h"
-#include "log.h"
-#include "bme280.h"
-#include "i2c.h"
-#include "gpio.h"
-#include "pid.h"
 #include <unistd.h>
-#include <signal.h>
 #include <stdlib.h>
+#include <ncurses.h>
+#include "control_loop.h"
 #include "temperatures.h"
 #include "quit.h"
-#include <ncurses.h>
 
 
 #ifndef MENU_H_
