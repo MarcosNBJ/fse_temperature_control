@@ -43,6 +43,9 @@ void set_reference() {
   wmove(reference_window, _starty + 1, _startx + 13);
   wscanw(reference_window, "%f", &reference);
 
+  isUserDefined=1;
+  userDefinedTemperature=reference;
+
   ask_reference = 0;
 
   clear_menu(reference_window);
@@ -139,7 +142,9 @@ void menu() {
 					keypad(window, TRUE);
 					refresh();
 				}
-
+				if (option ==2){
+					isUserDefined=0;
+				}
 
 				if (option == 3) {
 					quit();

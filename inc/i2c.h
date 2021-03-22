@@ -2,6 +2,6 @@
 #define I2C_H_
 
 #include "bme280.h"
-void I2C();
+void initI2C();
 float getExternalTemp();
 #endif

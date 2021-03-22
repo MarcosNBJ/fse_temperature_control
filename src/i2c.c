@@ -2,7 +2,7 @@
 #define I2C_ADDR 0x76
 
 
-void I2C(){
+void initI2C(){
     bme280Init(1, I2C_ADDR);
 }
 float getExternalTemp(){

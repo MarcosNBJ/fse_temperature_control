@@ -2,7 +2,7 @@
 #define LCD_H_
 #include "temperatures.h"
 
-void lcd_init(void);
+void initLCD(void);
 void lcd_byte(int bits, int mode);
 void lcd_toggle_enable(int bits);
 

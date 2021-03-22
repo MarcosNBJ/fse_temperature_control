@@ -102,7 +102,7 @@ void lcd_toggle_enable(int bits)   {
   delayMicroseconds(500);
 }
 
-void lcd_init()   {
+void initLCD()   {
 
   if (wiringPiSetup () == -1) exit (1);
   fd = wiringPiI2CSetup(I2C_ADDR);

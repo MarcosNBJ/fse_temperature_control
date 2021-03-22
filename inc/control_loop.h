@@ -1,14 +1,12 @@
 #include<stdio.h>
 #include<uart.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include "lcd.h"
 #include "log.h"
-#include "bme280.h"
 #include "i2c.h"
 #include "gpio.h"
 #include "pid.h"
-#include <unistd.h>
-#include <signal.h>
-#include <stdlib.h>
 #include "temperatures.h"
 #include "menu.h"
 

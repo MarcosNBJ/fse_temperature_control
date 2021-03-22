@@ -1,3 +1,7 @@
+#include <wiringPi.h>
+#include <softPwm.h>
+#include <stdlib.h>
+
 #ifndef GPIO_H_
 #define GPIO_H_
 

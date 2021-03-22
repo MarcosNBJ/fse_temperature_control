@@ -1,10 +1,20 @@
 #include "control_loop.h"
 
+
+volatile int isUserDefined=0;
+volatile float userDefinedTemperature;
+
 void readTemperatures(TempInfo* temp){
 
     temp->extTemperature = getExternalTemp();
     temp->intTemperature = getInternalTemp();
-    temp->refTemperature = getPotentiometerTemp();
+
+    if(isUserDefined){
+        temp->refTemperature=userDefinedTemperature;
+    }else{
+        temp->refTemperature = getPotentiometerTemp();
+    }
+
 }
 
 

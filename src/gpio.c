@@ -1,7 +1,4 @@
 #include "gpio.h"
-#include <wiringPi.h>
-#include <softPwm.h>
-#include <stdlib.h>
 
 #define PIN_RESISTOR 4
 #define PIN_FAN 5
