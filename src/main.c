@@ -29,7 +29,7 @@ void readTemperatures(TempInfo* temp){
 
 
 int main(){
-     signal(SIGINT,quit);
+    signal(SIGINT,quit);
     lcd_init();
     I2C();
     initGPIO();
@@ -49,13 +49,13 @@ int main(){
 
 		temperatures.refTemperature = pid_get_referencia();
 
-        printf("%lf %lf %lf\n",temperatures.intTemperature,
+        printf("TI:%lf TE:%lf TR:%lf\n",temperatures.intTemperature,
                             temperatures.extTemperature, temperatures.refTemperature);
 
         writeTemperaturesLCD(temperatures);
         
         if(log){
-            appentToLog(temperatures, abs((int)saidaControle));
+            appentToLog(temperatures, (int)saidaControle);
             log=0;
         }else{
             log = 1;

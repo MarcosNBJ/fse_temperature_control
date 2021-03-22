@@ -19,11 +19,8 @@ int openUART() {
     if (uart0_filestream == -1)
     {
         printf("Erro - Não foi possível iniciar a UART.\n");
-    }
-    else
-    {
-        printf("UART inicializada!\n");
-    }    
+        return -1;
+    }  
     struct termios options;
     tcgetattr(uart0_filestream, &options);
     options.c_cflag = B9600 | CS8 | CLOCAL | CREAD;     //<Set baud rate
@@ -48,11 +45,9 @@ float readFromUART(int uart0_filestream, unsigned char subcode){
     short crc = calcula_CRC(modbus_package, 7);
     memcpy(&modbus_package[7], &crc, 2);
 
-    printf("Buffers de memória criados!\n");
     
     if (uart0_filestream != -1)
     {
-        printf("Escrevendo caracteres na UART ...");
         int count = write(uart0_filestream, modbus_package, 9);
         if (count < 0)
         {
