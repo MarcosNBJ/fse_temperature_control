@@ -31,4 +31,3 @@ Esse é um gráfico que mostra a variação dos valores de acionamento dos atuad
 
 ## Screenshots do projeto
 ![screenshot1](screenshots/screenshot1.png)
-![screenshot2](screenshots/screenshot2.png)
