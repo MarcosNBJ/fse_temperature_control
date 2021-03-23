@@ -82,20 +82,20 @@ void printToTerminal(TempInfo temp, int controle) {
 
   //displaying all temperatures and the value of PID control signal
   mvwprintw(window, 6, 1, "\t---Informacoes em tempo real---");
-  mvwprintw(window, 8, 1, "\tTEMP INTERNA: %.2f TEMP EXTERNA: %.2f", temp.intTemperature, temp.extTemperature);
-  mvwprintw(window, 9, 1, "\tTEMP REFERENCIA: %.2f SINAL DE CONTROLE: %d", temp.refTemperature, controle);
+  mvwprintw(window, 8, 1, "\tTEMP INTERNA: %4.2f TEMP EXTERNA: %4.2f\t", temp.intTemperature, temp.extTemperature);
+  mvwprintw(window, 9, 1, "\tTEMP REFERENCIA: %4.2f SINAL DE CONTROLE: %d\t", temp.refTemperature, controle);
 
   //displaying the state of the resistor and fan
   if(controle > 0){
-      mvwprintw(window, 11, 1, "\tRESISTOR: %s","LIGADO");
-      mvwprintw(window, 12, 1, "\tFAN: %s", "DESLIGADO");
+      mvwprintw(window, 11, 1, "\tRESISTOR: %s","LIGADO\t");
+      mvwprintw(window, 12, 1, "\tFAN: %s", "DESLIGADO\t");
   }else{
-      mvwprintw(window, 11, 1, "\tRESISTOR: %s","DESLIGADO");
+      mvwprintw(window, 11, 1, "\tRESISTOR: %s","DESLIGADO\t");
       if(controle < -40){
-      mvwprintw(window, 12, 1, "\tFAN: %s", "LIGADO");
+      mvwprintw(window, 12, 1, "\tFAN: %s", "LIGADO\t");
       }
       else{
-          mvwprintw(window, 12, 1, "\tFAN: %s", "DESLIGADO");
+          mvwprintw(window, 12, 1, "\tFAN: %s", "DESLIGADO\t");
       }
   }
   
