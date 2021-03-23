@@ -27,7 +27,7 @@ void inputReference() {
 
   wborder(inputWindow, ACS_VLINE, ACS_VLINE,ACS_HLINE,ACS_HLINE, ACS_ULCORNER, ACS_URCORNER, ACS_LLCORNER, ACS_LRCORNER);
 
-  mvwprintw(inputWindow, _starty + 1, _startx + 1, "Digite a temperatura desejada, usando ponto como separador: ");
+  mvwprintw(inputWindow, _starty + 1, _startx + 1, "Temperatura: ");
 
   echo();
   wmove(inputWindow, _starty + 1, _startx + 13);
