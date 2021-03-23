@@ -11,7 +11,7 @@
 #define MENU_H_
 
 void menu();
-void printToTerminal(TempInfo temp, int controle, char *options, int noptions);
+void printToTerminal(TempInfo temp, int controle);
 void clearWindow(WINDOW *window);
 
 #endif
