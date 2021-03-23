@@ -4,7 +4,7 @@
 #define HEIGHT 20
 
 WINDOW *window; //main window where everything is displayed
-int ask_reference=0, //control variable, used to check if we are on main window or input window
+int ask_reference=0; //control variable, used to check if we are on main window or input window
 
 void inputReference() {
   /*
