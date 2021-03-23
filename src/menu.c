@@ -42,7 +42,7 @@ void inputReference() {
   clearWindow(inputWindow);
 }
 
-void showMenu(WINDOW *window, int highlight, char *options, int noptions) {
+void showMenu(WINDOW *window, int highlight, char **options, int noptions) {
 	/*
 	   Displays the options menu
 	*/
